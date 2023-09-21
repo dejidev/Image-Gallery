@@ -2,26 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+input {
+    @apply border border-[#0b0804] py-2 px-6 rounded-2xl placeholder:text-[#0b0804] placeholder:text-sm
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@media (max-width: 380px) {
+    input {
+        width: 200px;
+        /* Set the width to 200px for screens less than 280px wide */
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 16px;
+}
+
+.masonry-grid>li {
+    grid-column-end: span 1;
+    /* Initial column span for each item */
+}
+
+@media (min-width: 768px) {
+    .masonry-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* Adjust for larger screens */
+    }
 }
