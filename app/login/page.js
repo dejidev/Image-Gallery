@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 
 const Page = async () => {
     const session = await getServerSession(authOptions);
-
+    console.log(session);
     if (session) {
         redirect("/dashboard")
         console.log("User is authenticated. Redirecting to /dashboard");

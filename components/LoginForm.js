@@ -43,7 +43,7 @@ const LoginForm = () => {
                 return
             }
 
-            router.replace("dashboard")
+            // router.replace("dashboard")
 
         } catch (error) {
             console.error("Error during login", error);
