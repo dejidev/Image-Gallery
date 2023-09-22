@@ -23,6 +23,8 @@ const Page = () => {
     setMenuOpen(!menuOpen);
   };
 
+  console.log(images);
+
   const handleSearch = async () => {
     if (!query) {
       return;
