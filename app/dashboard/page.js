@@ -20,7 +20,6 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  console.log(menuOpen);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

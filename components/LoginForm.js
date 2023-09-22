@@ -42,9 +42,11 @@ const LoginForm = () => {
                 setError("Invalid Credentials");
                 return
             }
+if (res.ok){
+    router.push("/dashboard")
+}
+            // router.replace("dashboard")
 
-            router.push("/dashboard")
-            
         } catch (error) {
             console.error("Error during login", error);
             // setError("An unexpected error occurred. Please try again later.");
