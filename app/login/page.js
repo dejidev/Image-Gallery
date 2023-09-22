@@ -9,10 +9,10 @@ import Footer from '../../components/Footer';
 const Page = async () => {
     const session = await getServerSession(authOptions);
 
-    // if (session) {
-    //     redirect("/dashboard")
-    //     console.log("User is authenticated. Redirecting to /dashboard");
-    // }
+    if (session) {
+        redirect("/dashboard")
+        console.log("User is authenticated. Redirecting to /dashboard");
+    }
 
     return (
         <div className="flex flex-col min-h-screen">
