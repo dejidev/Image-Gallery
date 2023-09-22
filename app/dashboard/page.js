@@ -13,7 +13,7 @@ import Footer from "../../components/Footer";
 import { Oval } from 'react-loader-spinner'
 import { FaBars } from 'react-icons/fa';
 
-const page = () => {
+const Page = () => {
   const [images, setImages] = useState([])
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -155,4 +155,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
