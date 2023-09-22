@@ -13,10 +13,6 @@ const LoginForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
-
-
-
-
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };

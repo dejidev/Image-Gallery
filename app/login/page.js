@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 const Page = async () => {
     const session = await getServerSession(authOptions);
     // router = useRouter()
-    // console.log(session);
+    console.log(session);
     // if (session) {
     //     // redirect("/dashboard")
     //     router.push("/dashboard")
