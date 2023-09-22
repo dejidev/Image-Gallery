@@ -1,17 +1,17 @@
 import LoginForm from '../../components/LoginForm';
 import { getServerSession } from 'next-auth';
 import { authOptions } from "../../app/api/auth/[...nextauth]/route";
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import bg from "../../app/assets/bgg.jpg"
 import Footer from '../../components/Footer';
 
 const Page = async () => {
-    const session = await getServerSession(authOptions);
+    // const session = await getServerSession(authOptions);
 
-    if (session) {
-        redirect("/dashboard")
-    }
+    // if (session) {
+    //     redirect("/dashboard")
+    // }
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -38,4 +38,4 @@ const Page = async () => {
     )
 }
 
-export default  Page
+export default Page
