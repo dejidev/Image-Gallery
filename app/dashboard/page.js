@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import SignOut from "../../components/SignOut";
 import UserInfo from "../../components/UserInfo";
 import { fetchCuratedPhotos, searchPhotos } from "../../lib/pexelsApi";
 import ImgContainer from "../../components/ImgContainer";
@@ -12,9 +10,9 @@ import Footer from "../../components/Footer";
 import { Oval } from 'react-loader-spinner'
 import { FaBars } from 'react-icons/fa';
 import { signOut } from "next-auth/react";
+
 const Page = () => {
   const [images, setImages] = useState([])
-  const router = useRouter();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);

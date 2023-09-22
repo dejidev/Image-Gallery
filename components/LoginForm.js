@@ -42,9 +42,9 @@ const LoginForm = () => {
                 setError("Invalid Credentials");
                 return
             }
-if (res.ok){
-    router.push("/dashboard")
-}
+            if (res.ok) {
+                router.push("/dashboard")
+            }
             // router.replace("dashboard")
 
         } catch (error) {
