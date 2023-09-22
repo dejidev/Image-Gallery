@@ -47,6 +47,7 @@ const LoginForm = () => {
 
         } catch (error) {
             console.error("Error during login", error);
+            setIsLoading(false)
             // setError("An unexpected error occurred. Please try again later.");
         }
     };
