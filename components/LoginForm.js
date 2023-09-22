@@ -13,6 +13,10 @@ const LoginForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
+
+
+
+
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
@@ -43,7 +47,7 @@ const LoginForm = () => {
                 return
             }
 
-            // router.replace("dashboard")
+            router.replace("dashboard")
 
         } catch (error) {
             console.error("Error during login", error);

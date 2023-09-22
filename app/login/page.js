@@ -8,11 +8,13 @@ import Footer from '../../components/Footer';
 
 const Page = async () => {
     const session = await getServerSession(authOptions);
-    console.log(session);
-    if (session) {
-        redirect("/dashboard")
-        console.log("User is authenticated. Redirecting to /dashboard");
-    }
+    // router = useRouter()
+    // console.log(session);
+    // if (session) {
+    //     // redirect("/dashboard")
+    //     router.push("/dashboard")
+    //     console.log("User is authenticated. Redirecting to /dashboard");
+    // }
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -32,7 +34,7 @@ const Page = async () => {
                         Login to the Gallery of the gods
                     </h1>
                 </div>
-                <LoginForm />
+                <LoginForm session={session}/>
             </main>
             <Footer />
         </div>
