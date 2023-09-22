@@ -90,7 +90,7 @@ const RegisterForm = () => {
                 // Reset the form
                 const form = e.target;
                 form.reset();
-                router.push("/")
+                router.push("/login")
             } else {
                 const errorResponse = await res.json();
                 console.log("User registration failed:", errorResponse);
