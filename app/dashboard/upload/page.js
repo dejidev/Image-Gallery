@@ -6,7 +6,9 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import bg from "../../assets/bgg.jpg";
 import Footer from "../../../components/Footer"
-const page = () => {
+import { signOut } from "next-auth/react";
+
+const Page = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
 
@@ -44,7 +46,7 @@ const page = () => {
                         className={`bg-white text-[#0b0804] mt-2 p-2 rounded-md shadow-lg text-center gap-2 ${menuOpen ? "block" : "hidden"
                             }`}
                     >
-                        <button className={`block text-[#0b0804] hover:text-red-500`}>
+                        <button className={`block text-[#0b0804] hover:text-red-500`} onClick={() => signOut()}>
                             Sign Out
                         </button>
                         <button className={`block text-[#0b0804] hover:text-red-500`}>
@@ -62,4 +64,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

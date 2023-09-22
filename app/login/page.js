@@ -6,7 +6,7 @@ import Image from 'next/image';
 import bg from "../../app/assets/bgg.jpg"
 import Footer from '../../components/Footer';
 
-const page = async () => {
+const Page = async () => {
     const session = await getServerSession(authOptions);
 
     if (session) {
@@ -38,4 +38,4 @@ const page = async () => {
     )
 }
 
-export default page
+export default  Page

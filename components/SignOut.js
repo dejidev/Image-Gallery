@@ -1,11 +1,10 @@
 "use client";
 
-import { signOut } from "next-auth/react";
 
 const SignOut = () => {
     return (
         <div>
-            <button className="" onClick={() => signOut()}>Sign out</button>
+            <button className="" >Sign out</button>
         </div>
     )
 }

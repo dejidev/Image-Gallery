@@ -5,7 +5,7 @@ import bg from "../assets/bgg.jpg"
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-const page = async () => {
+const Page = async () => {
     const session = await getServerSession(authOptions);
 
     if (session) {
@@ -37,4 +37,4 @@ const page = async () => {
     )
 }
 
-export default page
+export default Page
