@@ -37,17 +37,17 @@ const RegisterForm = () => {
         }
 
         // Validate email format (simple example)
-        // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // if (!emailRegex.test(email)) {
-        //     setError("Please enter a valid email address.");
-        //     return;
-        // }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setError("Please enter a valid email address.");
+            return;
+        }
 
-        // // Password length validation
-        // if (password.length < 8) {
-        //     setError("Password must be at least 8 characters long.");
-        //     return;
-        // }
+        // Password length validation
+        if (password.length < 8) {
+            setError("Password must be at least 8 characters long.");
+            return;
+        }
 
         setIsLoading(true);
         console.log("Submitting");
